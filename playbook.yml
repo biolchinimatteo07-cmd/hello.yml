@@ -9,7 +9,7 @@
 
        - name: Health check - vérifier qu'un endpoint répond
          ansible.builtin.uri:
-           url: https://www.google.com
+           url: https://www.cjsprovence.com
            method: GET
            status_code: 200
          register: health_result

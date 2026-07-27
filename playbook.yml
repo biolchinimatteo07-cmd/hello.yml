@@ -5,4 +5,15 @@
      tasks:
        - name: Afficher un message
          debug:
-           msg: "Hello depuis Ansible + Semaphore V2"
+           msg: "Hello depuis Ansible + Semaphore"
+
+       - name: Health check - vérifier qu'un endpoint répond
+         ansible.builtin.uri:
+           url: https://www.google.com
+           method: GET
+           status_code: 200
+         register: health_result
+
+       - name: Afficher le résultat du health check
+         debug:
+           msg: "Health check réussi : statut {{ health_result.status }}"

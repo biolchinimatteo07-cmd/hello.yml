@@ -5,7 +5,7 @@
      tasks:
        - name: Afficher un message
          debug:
-           msg: "Hello depuis Ansible + Semaphore"
+           msg: "V3 via jenkins"
 
        - name: Health check - vérifier qu'un endpoint répond
          ansible.builtin.uri:

@@ -1,7 +1,6 @@
 ---
    - name: Test FleetNote
-     hosts: localhost
-     connection: local
+     hosts: ssh-target
      tasks:
        - name: Afficher un message
          debug:
